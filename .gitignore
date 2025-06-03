@@ -1,0 +1,33 @@
+# Build
+bin/
+obj/
+
+# Rider
+.idea/
+*.sln.iml
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Logs
+*.log
+
+# Visual Studio Code
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Dotnet tooling
+*.nupkg
+*.snupkg
+
+# EF Migrations snapshot
+Migrations/
+
+# Secrets
+appsettings.Development.json
