@@ -155,3 +155,4 @@
 /Users/mykasulin/Desktop/WEBBUTVECKLING/MOLNTJÄNSTER/INLÄMINGSUPPGIFT/BackEnd/BookingService/Presentation/obj/Release/net9.0/Presentation.pdb
 /Users/mykasulin/Desktop/WEBBUTVECKLING/MOLNTJÄNSTER/INLÄMINGSUPPGIFT/BackEnd/BookingService/Presentation/obj/Release/net9.0/Presentation.genruntimeconfig.cache
 /Users/mykasulin/Desktop/WEBBUTVECKLING/MOLNTJÄNSTER/INLÄMINGSUPPGIFT/BackEnd/BookingService/Presentation/obj/Release/net9.0/ref/Presentation.dll
+/Users/mykasulin/Desktop/WEBBUTVECKLING/MOLNTJÄNSTER/INLÄMINGSUPPGIFT/BackEnd/BookingService/Presentation/obj/Release/net9.0/Presentation.sourcelink.json

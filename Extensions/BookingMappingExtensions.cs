@@ -26,4 +26,51 @@ public static class BookingMappingExtensions
             }
         };
     }
+
+    public static Booking ToModel(this BookingEntity entity)
+    {
+        return new Booking
+        {
+            Id = entity.Id,
+            EventId = entity.EventId,
+            TicketQuantity = entity.TicketQuantity,
+            BookingDate = entity.BookingDate,
+            FirstName = entity.BookingOwner?.FirstName,
+            LastName = entity.BookingOwner?.LastName,
+            Email = entity.BookingOwner?.Email,
+            StreetName = entity.BookingOwner?.Address?.StreetName,
+            PostalCode = entity.BookingOwner?.Address?.PostalCode,
+            City = entity.BookingOwner?.Address?.City
+        };
+    }
+
+    public static void Update(this BookingEntity entity, UpdateBookingRequest request)
+    {
+        if (request.TicketQuantity.HasValue)
+            entity.TicketQuantity = request.TicketQuantity.Value;
+
+        if (entity.BookingOwner != null)
+        {
+            if (!string.IsNullOrWhiteSpace(request.FirstName))
+                entity.BookingOwner.FirstName = request.FirstName;
+
+            if (!string.IsNullOrWhiteSpace(request.LastName))
+                entity.BookingOwner.LastName = request.LastName;
+
+            if (!string.IsNullOrWhiteSpace(request.Email))
+                entity.BookingOwner.Email = request.Email;
+
+            if (entity.BookingOwner.Address != null)
+            {
+                if (!string.IsNullOrWhiteSpace(request.StreetName))
+                    entity.BookingOwner.Address.StreetName = request.StreetName;
+
+                if (!string.IsNullOrWhiteSpace(request.PostalCode))
+                    entity.BookingOwner.Address.PostalCode = request.PostalCode;
+
+                if (!string.IsNullOrWhiteSpace(request.City))
+                    entity.BookingOwner.Address.City = request.City;
+            }
+        }
+    }
 }
